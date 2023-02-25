@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Plan</title>
+</head>
+<body>
+    <h1>Meal Plan</h1>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Breakfast</th>
+            <th>Lunch</th>
+            <th>Dinner</th>
+        </tr>
+        {% for day, meals in meal_plan.items() %}
+        <tr>
+            <td>{{ day }}</td>
+            <td>{{ meals['Breakfast'] }}</td>
+            <td>{{ meals['Lunch'] }}</td>
+            <td>{{ meals['Dinner'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>Don't like what you see? <a href="/suggestions">Click here</a> for alternative meal suggestions.</p>
+</body>
+</html>
